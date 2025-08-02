@@ -63,7 +63,7 @@ pip3 install flask gunicorn
 ```
 ---
 ### In the terminal 
-- Create use **vim app.py** to create flask app and paste this code in it.
+- Use **vim app.py** to create flask app and paste this code in it.
 
 ```python
 from flask import Flask
