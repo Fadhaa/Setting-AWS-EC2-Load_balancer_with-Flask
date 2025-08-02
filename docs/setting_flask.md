@@ -60,11 +60,8 @@ python3 -m pip install --upgrade pip
 
 pip3 install flask gunicorn
 
-### 🧾 Step 2: Paste the User Data Script
-
-#### For Amazon Linux 2:
-
-```bash
+```
+---
 
 cat > /home/ec2-user/flask-app/app.py << EOF
 from flask import Flask
