@@ -93,4 +93,6 @@ my-app-lb-1234567890.us-east-1.elb.amazonaws.com
 
 ## ✅ Done!
 
+#### Go to your instance terminal and enter the directory where your app.py exist and run ** (sudo gunicorn --bind 0.0.0.0:80 app:app)
+
 You can now securely access your application at `https://yourdomain_name/`.
