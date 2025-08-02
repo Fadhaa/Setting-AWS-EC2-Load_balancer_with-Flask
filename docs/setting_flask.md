@@ -63,8 +63,10 @@ pip3 install flask gunicorn
 ```
 ---
 ### In the terminal 
-- Use **vim app.py** to create flask app and paste this code in it.
-
+- Use **vim app.py** to create flask app.
+- press **Insert** in your keyboard.
+- paste this code in it
+  
 ```python
 from flask import Flask
 app = Flask(__name__)
@@ -72,14 +74,22 @@ app = Flask(__name__)
 def home():
     return "Hello from Flask on myserver1 (via User Data)"
 ```
+- Press **ESC** in your keyboard
+- type **:wq**
+- Then run the command
 
-
-cd /home/ec2-user/myproject/myflaskapp
-
+```bash
 gunicorn --bind 0.0.0.0:80 app:app
+```
+You should see 
+
+Starting gunicorn 23.0.0
+Listening at: http://0.0.0.0:80
+Using worker: sync
+Booting worker with pid: 7777
 
 Open your browser and type:
-http://<EC2-Public-IP>:80
+**http:/ /Public-IP:80**
 
 You should see ***Hello from Flask on myserver1 (via User Data)**
 
