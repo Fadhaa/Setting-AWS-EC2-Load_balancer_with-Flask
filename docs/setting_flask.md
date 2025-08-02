@@ -83,16 +83,16 @@ gunicorn --bind 0.0.0.0:80 app:app
 ```
 You should see 
 
-Starting gunicorn 23.0.0
-Listening at: http://0.0.0.0:80
-Using worker: sync
-Booting worker with pid: 7777
+- Starting gunicorn 23.0.0.
+- Listening at: http://0.0.0.0:80
+- Using worker: sync
+- Booting worker with pid: 7777
 
 Open your browser and type:
-**http:/ /Public-IP:80**
+**http://your_Public-IP:80**
 
 You should see ***Hello from Flask on myserver1 (via User Data)**
 
-If not recheck your settings 
+If not, recheck your settings 
 
 
