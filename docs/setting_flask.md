@@ -12,18 +12,6 @@ This guide explains how to install and run a simple Flask app on your EC2 instan
 - The security group allows **inbound HTTP (port 80)** access
 - The instance has **auto-assigned public IP**
 
-  ### First update your subnet that ssociated with the instance
-
-  1. Go to **subnets**, select your subnet. In my example, it's **mysubnet1**
-  2. Click on **Network ACL** in the middle of the page
-  3. Click on your **Network ACL Name** next to **Network ACL** (e.g. acl-0d59dcvfdggt455)
-  4. Select the ACL from the list above.
-  5. in the middle of the page, click on **Inbound rules**
-  6. Then click **Edit inbound rules**
-  7. Add a new rule for SSH with source 0.0.0.0/0 and another for HTTP with source 0.0.0.0/0.
-  9. Click **save changes**
- 
-- 
 
 ---
 
