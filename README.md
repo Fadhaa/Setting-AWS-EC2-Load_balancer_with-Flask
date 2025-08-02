@@ -6,22 +6,22 @@ This repository documents the step-by-step instructions to deploy a Flask web ap
 
 Below are the individual guides, in the recommended execution order:
 
-1. ✅ **[vpc-requirements.md](./vpc-requirements.md)**  
+1. ✅ **[vpc-requirements.md](./docs/vpc-requirements.md)**  
    Set up a custom Virtual Private Cloud (VPC) with public subnets, route tables, and an internet gateway.
 
-2. ✅ **[ec2_settup.md](./ec2_settup.md)**  
+2. ✅ **[ec2_settup.md](./docs/ec2_settup.md)**  
    Launch and configure an EC2 instance inside your VPC with key pair, security group, and IAM role.
 
-3. ✅ **[setting_flask.md](./setting_flask.md)**  
+3. ✅ **[setting_flask.md](./docs/setting_flask.md)**  
    Install and configure your Flask application on the EC2 instance, including WSGI server setup (e.g., Gunicorn) and reverse proxy using Nginx.
 
-4. ✅ **[creatingACM.md](./creatingACM.md)**  
+4. ✅ **[creatingACM.md](./docs/creatingACM.md)**  
    Request and validate an SSL/TLS certificate via AWS Certificate Manager (ACM) for your domain.
 
-5. ✅ **[Load-balancer.md](./Load-balancer.md)**  
+5. ✅ **[Load-balancer.md](./docs/Load-balancer.md)**  
    Set up an Application Load Balancer with HTTP and HTTPS listeners. Forward HTTPS traffic to your Flask app.
 
-6. ✅ **[settingRecords.md](./settingRecords.md)**  
+6. ✅ **[settingRecords.md](./docs/settingRecords.md)**  
    Use Route 53 to configure domain records and connect your domain to the Load Balancer using alias or A records.
 
 ---
