@@ -52,7 +52,7 @@ Click on **"Edit"** under Network Settings:
 
 #### Add Inbound Rules:
 - Under **Inbound Security Group Rules**
-- ✅ **SSH** — Port 22 — Source: **My IP**
+- ✅ **SSH** — Port 22 — Source: **Anywhere (0.0.0.0/0)**
 - ✅ **HTTP** — Port 80 — Source: **Anywhere (0.0.0.0/0)**
 
 
