@@ -14,4 +14,5 @@ Before launching EC2 instances, make sure you've already created:
 - A **Route Table** named `mytable1` (associated with both subnets)
 - An **Internet Gateway** named `myiqw1` (attached to `myvpc1`)
 
+### see https://github.com/Fadhaa/Setting-AWS-EC2-Load_balancer_with-Flask/blob/main/docs/vpc-requirements.md
 ---
