@@ -12,24 +12,60 @@ This guide explains how to install and run a simple Flask app on your EC2 instan
 - The security group allows **inbound HTTP (port 80)** access
 - The instance has **auto-assigned public IP**
 
+  ### First update your subnet that ssociated with the instance
+
+  1. Go to **subnets**, select your subnet. In my example, it's **mysubnet1**
+  2. Click on **Network ACL** in the middle of the page
+  3. Click on your **Network ACL Name** next to **Network ACL** (e.g. acl-0d59dcvfdggt455)
+  4. Select the ACL from the list above.
+  5. in the middle of the page, click on **Inbound rules**
+  6. Then click **Edit inbound rules**
+  7. Add a new rule for SSH with source 0.0.0.0/0 and another for HTTP with source 0.0.0.0/0.
+  9. Click **save changes**
+ 
+- 
+
 ---
 
-## 
+## 🔌 Step 1: Connect to Instance via AWS Console
 
+1. Go to **EC2 > Instances**
+2. Select the instance named `myserver1`
+3. Click the **"Connect"** button at the top
+4. In the **Connect to instance** panel:
+   - Choose **"EC2 Instance Connect (browser-based SSH)"**
+   - Click **"Connect"**
 
+You will now see a terminal inside your browser connected to your instance.
 
+---
+
+## ⚙️ Step 2: Install Python, pip, Flask, and Gunicorn
+
+Depending on your instance OS, run the following commands **in the browser terminal**:
+
+### ✅ For Amazon Linux 2:
+
+```bash
+sudo su
+mkdir myproject
+cd myproject
+mkdir myflaskapp
+cd myflaskapp
+sudo yum update -y
+sudo yum install python3 -y
+python3 -m venv venv
+source venv/bin/activate
+python3 -m pip install --upgrade pip
+
+pip3 install flask gunicorn
 
 ### 🧾 Step 2: Paste the User Data Script
 
 #### For Amazon Linux 2:
 
 ```bash
-#!/bin/bash
-yum update -y
-yum install python3 -y
-pip3 install flask gunicorn
 
-mkdir -p /home/ec2-user/flask-app
 cat > /home/ec2-user/flask-app/app.py << EOF
 from flask import Flask
 app = Flask(__name__)
