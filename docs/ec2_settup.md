@@ -1,14 +1,17 @@
 
-# Step 1: Launch an EC2 Instance via AWS Console (No Bash Required)
+# Step 1: Launch EC2 Instances inside Custom VPC (`myvpc1`)
 
-This guide walks you through launching an EC2 instance using the AWS Management Console.
+This guide walks you through launching EC2 instances in your custom VPC (`myvpc1`) using the AWS Console.
 
 ---
 
 ## ✅ Prerequisites
 
-- You have an [AWS account](https://aws.amazon.com/)
-- You are signed in to the [AWS Console](https://console.aws.amazon.com/)
-- You have a region selected (e.g., `us-east-1`, `eu-west-2`)
+Before launching EC2 instances, make sure you've already created:
+
+- A **VPC** named `myvpc1`
+- Two **public subnets**: `mysubnet1` and `mysubnet2` in different Availability Zones
+- A **Route Table** named `mytable1` (associated with both subnets)
+- An **Internet Gateway** named `myiqw1` (attached to `myvpc1`)
 
 ---
