@@ -36,6 +36,70 @@ This guide walks you through Creating VPC using the AWS Management Console.
    - Click on **create Subnet**
   
 
-  ---
+
+
+---
+
+## 3️⃣ Create an Internet Gateway
+1. Go to **Internet Gateways → Create internet gateway**
+2. In **Name**, enter **myigw1**
+3. Click **Create internet gateway**
+   - Select it and click **Actions → Attach to VPC**
+   - Choose `myvpc1`
+
+---
+
+## 4️⃣ Create a Route Table
+1. Go to **Route Tables → Create route table**
+2. In **Name**, use **mytable1**
+3. In **VPC**, select your vpc **myvpc1**
+4. Click on **create route table**
+
+---
+
+## 5️⃣ Add Route to the Internet:
+-Select the route table
+1. Go to **Routes tab → Edit routes → Add route**
+  - Destination: `0.0.0.0/0`
+  - Target: Select the Internet Gateway (`myigw1`)
+- Click **Save routes**
+
+
+## 6️⃣ Associate Subnets with Route Table
+- Go to **Subnet Associations → Edit subnet associations**
+- Select `mysubnet1`
+- From **Action** click on **Edit route table association**
+- In **Route table ID**, select **mytable1**
+- Click **Save**
+- Repeate these steps with the other **mysubnet2**
+- Click **Save**
+
+---
+
+✅ Done! Your custom VPC is now ready.
+
+You can now launch EC2 instances inside these subnets and ensure they have public internet access.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
