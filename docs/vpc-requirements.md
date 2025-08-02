@@ -36,7 +36,20 @@ This guide walks you through Creating VPC using the AWS Management Console.
    - Click on **create Subnet**
   
 
+##For both subnets, do the following
 
+### update your subnets
+
+  1. Go to **subnets**, select your subnet. In my example, it's **mysubnet1**
+  2. Click on **Network ACL** in the middle of the page
+  3. Click on your **Network ACL Name** next to **Network ACL** (e.g. acl-0d59dcvfdggt455)
+  4. Select the ACL from the list above.
+  5. in the middle of the page, click on **Inbound rules**
+  6. Then click **Edit inbound rules**
+  7. Add a new rule for SSH with source 0.0.0.0/0 and another for HTTP with source 0.0.0.0/0.
+  9. Click **save changes**
+      
+ 
 
 ---
 
